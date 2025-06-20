@@ -1,0 +1,27 @@
+create table Student(
+id int  primary key,
+name varchar(20) ,
+phone int not null,
+email varchar(30) unique
+
+);
+insert into  Student values (11,"aaa",122222,"as@gmail.com");
+insert into    student values(12,"bbb",12342,"12@gamil.com");
+insert into student values(13,"ccc",345678,"sssa@gmail.com");
+select*from student;
+select name   as   'Number'  from student;
+
+
+
+
+
+
+  create table coderz_org_employee_details(
+coderz_employee_id int,
+coderz_employee_name varchar(20)
+);
+insert into coderz_org_employee_details values(101,"Ankit");
+select* from coderz_org_employee_details;
+select coderz_employee_name as 'emp_first_name' from coderz_org_employee_details;
+
+
