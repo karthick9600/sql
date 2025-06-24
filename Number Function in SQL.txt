@@ -1,0 +1,26 @@
+CREATE TABLE orders (
+    order_id INT,
+    amount DECIMAL(10,2)
+);
+
+INSERT INTO orders VALUES
+    (101, 155.75),
+    (102, 240.20),
+    (103, 325.45);
+
+SELECT * FROM orders;
+select  order_id, mod(amount,100) as remainder from orders;
+select order_id, mod (amount,50)  as remainder from orders;
+select order_id , abs (amount-200) as absdifference from orders;
+select order_id,abs(100-amount) as absvalue from orders;
+
+select order_id,round(amount,1) as round1 from orders;
+select order_id, round(amount, 0) as round2  from orders;
+select  order_id,power(amount,2) as  amountsquare from orders;
+select  order_id, pow(amount,3) as amountCube from orders;
+select  order_id,sqrt(amount) as squareRoot from orders;
+select order_id ,sqrt(amount*2)as RootDouble  from orders;
+select order_id,ceil(AMOUNT/7.5) as ceilresult from orders;
+select order_id,ceil(amount*0.9) as ceildiscount  from orders;
+select order_id,floor(amount/5.2) as floorresult from orders;
+select order_id,floor(amount*0.75)as  floordiscount from orders;
