@@ -1,0 +1,23 @@
+create  table booking(
+bookingid int,
+customername  varchar(20),
+bookingdateTime  dateTime
+);
+ insert into booking( bookingid,customername,bookingdatetime)values
+ (1,'ananya',  '2025-04-20 09:15:00'),
+ (2,'ravi','2025-05-01  14:30:00'),
+ (3,'sneha','2025-05-03  18:00:00'),
+ (4,'vikram','2025-05-05  08:00:00'),
+ (5,'meera','2025-05-06 20:45:00');
+ select * from booking;                           
+ SElect   bookingid, date(bookingdateTime) as bookingDate, time(bookingdatetime) as bookingTime from booking;
+ select  customerName, datediff(curdate(),date(bookingdatetime)) as dayssincebooking from booking;
+ select bookingid,customerName,bookingdatetime from booking where datediff(curdate(),date(bookingdatetime))>3;
+  select customername,now()  as currentdatetime,timestampdiff(hour,bookingdatetime,now()) as hourspassed from booking;
+ select bookingid,customername,dayname(bookingdatetime)as   dayofweek  from booking;
+ select bookingid,month(bookingdatetime)asbookingmonth,year(bookingdatetime) as bookingyear from booking;
+ select bookingid,customernAME,bookingdatetime,date_add(bookingdatetime,interval 7 day) as  followupdate  from  booking;
+ select bookingid,customername,time(bookingdatetime)as bookingTime  from booking;
+ select bookingid,sysdate() as currentsystemtime from booking;
+ select customername,timestampdiff(minute,bookingdatetime,now())as  minutessincebooking  from booking;
+ 
