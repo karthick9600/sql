@@ -1,0 +1,72 @@
+create table studentscore(
+studentid int,
+studentname varchar(50),
+marks int
+);
+
+insert into studentscore(studentid,studentname,marks)values
+(1,'ananya',85),
+(2,'ravi',92),
+(3,'sneha',null),
+(4,'vikram',58),
+(5,'meera',76);
+select* from studentscore;
+
+select  studentname,marks,case when marks is null then   'not attempted'
+                        when  marks>=90  then 'excellent'
+                        when marks>=70 then'good'
+                        else 'needs  improvement'
+                        end as remarks  from studentscore;
+                        
+select studentid,studentname,if(marks is null,'pending evaluation','evaluated')as evaluationstatus from studentscore;
+select studentname,case when marks  is null then 'missing' 
+   when marks>=80 then 'a'
+   when marks>=60 then 'b'
+   else 'c'  end as finalgrade  from studentScore;
+   
+   
+create table contact(
+name varchar(20),
+phone bigint,
+mobile  bigint,
+landline bigint
+);
+
+insert into contact values
+('priya',null,4567898765,null),
+('ankit',98754321234,null,6787234212),
+('pooja',null,null,678723456),
+('shreya',null,null,null);
+select  * from contact;
+
+select name ,coalesce(phone,mobile,landline,'no number provided') from contact;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
