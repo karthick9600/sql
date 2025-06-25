@@ -1,0 +1,56 @@
+create table employees(
+emp_id   int,
+emp_name varchar(30),
+dept_id int
+);
+
+insert into employees values
+(1,'alice',101),
+(2,'bob',102),
+(3,'charlie',103),
+(4,'david',null);
+select * from employees;
+
+create  table departments(
+dept_id  int,
+dept_name varchar(40)
+);
+insert into departments values
+(101,'hr'),
+(102,'it'),
+(104,'finace');
+select * from departments;
+
+select e.emp_name,d.dept_name
+from employees e
+inner join departments d on e.dept_id=d.dept_id;
+
+select e.emp_name,d.dept_name
+from employees e
+left join departments d on e.dept_id=d.dept_id;
+
+
+select e.emp_name,d.dept_name
+from employees e
+right join departments d on e.dept_id =d.dept_id;
+
+SELECT e.emp_name, d.dept_name
+FROM employees e
+LEFT JOIN departments d ON e.dept_id = d.dept_id
+
+UNION
+
+SELECT e.emp_name, d.dept_name
+FROM employees e
+RIGHT JOIN departments d ON e.dept_id = d.dept_id;
+
+select e.emp_name,d.dept_name
+from employees e
+cross join departments d;
+
+  
+
+
+
+
+
