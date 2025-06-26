@@ -1,0 +1,24 @@
+-- Create the table
+CREATE TABLE emp (
+    e_id INT,
+    e_name VARCHAR(20)
+);
+
+-- Insert data (fixing the missing closing quote for 'suresh')
+INSERT INTO emp VALUES
+    (101, 'akash'),
+    (102, 'pooja'),
+    (103, 'rekha'),
+    (104, 'suresh');
+
+-- Update statement (correct syntax for SQL)
+UPDATE emp
+SET e_name = 'priya'
+WHERE e_name = 'pooja';
+
+-- View the data
+SELECT * FROM emp;
+
+
+delete from emp where e_name='akash';
+select* from emp;
