@@ -1,0 +1,30 @@
+create table  student(
+id int , 
+name  varchar(30),
+CITY varchar(50),
+MARKS int,
+bonus int
+);
+ insert into student  values
+ (1,'alice','delhi',85,10),
+ (2,'bob','mumbai',null, 5),
+ (3,'charlie','Delhi',92,null),
+ (4,'david','bangalore',45,3),
+ (5,'eva','mumbai',70,7),
+ (6,'farah','kolkata',null,null),
+ (7,'george','delhi',60,4),
+ (8,'helen',null,90,8);
+ 
+ select  distinct city from student  where city is not null  ;
+ select  distinct city  from student where marks between 60 and 90  and bonus is not null;
+ select  * from student  where city  in ('MUMBAI', 'kolkata') and marks>60 and bonus<10;
+ select * from student where  marks not between 50 and 90 and bonus is null and city!='delhi';
+ select * from student where  (marks>50 or bonus is null) and city='delhi';
+select * from student where city = 'mumbai' and marks between 50 and 70 and (bonus + 3) > 10;
+select *from student where  bonus +MARks>100 and marks is not null and bonus is null;
+select * from student where marks between 60 and 90 and  bonus>5;
+select * from student 
+where bonus is null 
+  and (marks between 70 and 90 or city = 'bangalore');
+  select * from student  where city ='delhi' and (marks between 60 and 85 and bonus is not null or marks>90);
+select distinct  name from student  where  marks +bonus >100  or bonus is null;
