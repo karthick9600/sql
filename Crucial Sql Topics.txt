@@ -1,0 +1,83 @@
+     🔥 Top SQL Topics Every Java Full Stack Developer Should Know:
+
+
+✅ 1. Basic SQL Queries
+SELECT, FROM, WHERE, ORDER BY, GROUP BY, HAVING
+
+Aliasing with AS
+
+Sorting and filtering results
+
+
+
+✅ 2. Joins
+INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN
+
+Joining multiple tables
+
+Self joins
+
+💡Joins are critical when working with relational data.
+
+
+
+✅ 3. Aggregations
+COUNT, SUM, AVG, MIN, MAX
+
+Using GROUP BY with aggregate functions
+
+
+
+✅ 4. Subqueries
+Scalar, correlated, and nested subqueries
+
+EXISTS, IN, ANY, ALL
+
+
+
+✅ 5. Data Manipulation (DML)
+INSERT, UPDATE, DELETE
+
+Best practices for updating/deleting records (especially with WHERE)
+
+
+
+✅ 6. Data Definition (DDL)
+CREATE, ALTER, DROP (Tables, Indexes, Constraints)
+
+Understanding schema design and data types
+
+
+
+✅ 7. Indexes and Performance
+How indexes work
+
+Impact on query performance
+
+EXPLAIN plans to analyze queries (important for large datasets)
+
+
+
+✅ 8. Transactions and ACID
+BEGIN, COMMIT, ROLLBACK
+
+Concepts of Atomicity, Consistency, Isolation, Durability
+
+Isolation levels (READ COMMITTED, SERIALIZABLE, etc.)
+
+
+
+✅ 9. Stored Procedures, Triggers & Functions
+Writing stored procedures in SQL
+
+When and why to use triggers and functions
+
+
+
+✅ 10. SQL in Java (JDBC, JPA/Hibernate)
+Writing raw SQL in Java using JDBC
+
+Using JPA/Hibernate with native queries or JPQL
+
+Understanding SQL injection and preventing it with prepared statements
+
