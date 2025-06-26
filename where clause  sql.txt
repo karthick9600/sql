@@ -1,0 +1,23 @@
+create table student (
+id int  primary key,
+name varchar(20) not null,
+math_MARKS int,
+science_marks int
+);
+insert into student( id,name,math_MARKS,science_marks) values
+(1,'alice',85,78),
+(2,'bob',56,61),
+(3,'charlie',92,89),
+(4,'david',92,89),
+(5,'eva',70,88);
+
+select *from student where math_MARKS>60 and science_marks>60;
+select * from student where math_marks>50 or science_marks>50;
+select * from student where  not math_marks>80;
+ select* from student where math_marks>60 and science_marks<80;
+ SELECT * from student where math_marks>80 or science_marks>80;
+ select * from student where math_marks in(56,70);
+  select * from student where science_marks in (39,61,88);
+  select * from student where id in (1,3,5);
+  select * from student where name in ('alice','david','eva');
+  select *from student where  not math_marks in (85,92)
